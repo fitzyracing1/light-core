@@ -1,0 +1,46 @@
+{
+  "name": "@fitzyracing1/light-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The one lit/dark rule, relevant-run picker and GitHub client shared by the light programs. No dependencies.",
+  "license": "MIT",
+  "author": "Joshua Almeida",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fitzyracing1/light-core.git"
+  },
+  "type": "module",
+  "main": "index.mjs",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.mjs"
+    },
+    "./light": "./src/light.mjs",
+    "./runs": "./src/runs.mjs",
+    "./github": "./src/github.mjs",
+    "./program": {
+      "types": "./program.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "index.d.ts",
+    "program.d.ts",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
